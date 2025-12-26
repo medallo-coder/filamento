@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('characteristics', function (Blueprint $table) {
             $table->id('id_caracteristica');
 
-            $table->enum('sexo', ['hombre', 'mujer'])->nullable();
+            $table->enum('sexo', ['masculino', 'femenino'])->nullable();
             $table->integer('edad')->nullable();
             $table->integer('edad_actual')->nullable();
             $table->string('estatura')->nullable();
@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('tipo_cabello',45)->nullable();
 
             $table->text('senas_particulares',200)->nullable();
+            $table->text('senas_odontologicas',200)->nullable();
             $table->string('implantes',200)->nullable();
             $table->string('protesis',200)->nullable();
 

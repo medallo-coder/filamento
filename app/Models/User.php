@@ -62,4 +62,8 @@ class User extends Authenticatable
     public function outfit() {
         return $this->hasMany(Outfit::class);
     }
+
+    public function characteristic(){
+        return $this->hasMany(Characteristic::class);
+    }
 }
