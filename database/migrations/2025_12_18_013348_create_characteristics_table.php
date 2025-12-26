@@ -15,16 +15,16 @@ return new class extends Migration
             $table->integer('edad')->nullable();
             $table->integer('edad_actual')->nullable();
             $table->string('estatura')->nullable();
-            $table->string('complexion')->nullable();
+            $table->string('complexion',50)->nullable();
 
-            $table->string('color_piel')->nullable();
-            $table->string('color_ojos')->nullable();
-            $table->string('color_cabello')->nullable();
-            $table->string('tipo_cabello')->nullable();
+            $table->string('color_piel',45)->nullable();
+            $table->string('color_ojos',45)->nullable();
+            $table->string('color_cabello',45)->nullable();
+            $table->string('tipo_cabello',45)->nullable();
 
-            $table->text('senas_particulares')->nullable();
-            $table->string('implantes')->nullable();
-            $table->string('protesis')->nullable();
+            $table->text('senas_particulares',200)->nullable();
+            $table->string('implantes',200)->nullable();
+            $table->string('protesis',200)->nullable();
 
             //  antes: people → ahora: users
             //  se conserva persona_id

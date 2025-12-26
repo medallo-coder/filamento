@@ -11,13 +11,13 @@ return new class extends Migration
         Schema::create('outfits', function (Blueprint $table) {
             $table->id('id_outfit');
 
-            $table->string('parte_superior')->nullable();
-            $table->string('color_superior')->nullable();
-            $table->string('parte_inferior')->nullable();
-            $table->string('color_infeiror')->nullable();
-            $table->string('calzado')->nullable();
-            $table->string('color_calzado')->nullable();
-            $table->string('accesorios')->nullable();
+            $table->string('parte_superior',80)->nullable();
+            $table->string('color_superior',80)->nullable();
+            $table->string('parte_inferior',80)->nullable();
+            $table->string('color_infeiror',80)->nullable();
+            $table->string('calzado',80)->nullable();
+            $table->string('color_calzado',80)->nullable();
+            $table->string('accesorios',80)->nullable();
 
             //  INSERTAR ID DE PERSONAS
             $table->foreignId('user_id')

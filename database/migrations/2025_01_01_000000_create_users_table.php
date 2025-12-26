@@ -10,14 +10,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique()->nullable();
+            $table->string('email',100)->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->rememberToken();
-            $table->string('name')->nullable();
-            $table->string('apellidos')->nullable();
-            $table->text('descripcion')->nullable();
-            $table->string('lugar_desaparicion')->nullable();
+            $table->string('name',30)->nullable();
+            $table->string('apellidos',30)->nullable();
+            $table->text('descripcion',2000)->nullable();
+            $table->string('lugar_desaparicion',60)->nullable();
             $table->dateTime('fecha_desaparicion')->nullable();
             $table->string('foto')->nullable();
             $table->enum('estado',['desaparecido','aparecido'])->nullable();
