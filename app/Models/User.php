@@ -27,6 +27,7 @@ class User extends Authenticatable
         'lugar_desaparicion',
         'fecha_desaparicion',
         'foto',
+        'estado',
         'role_id'
     ];
 
@@ -53,9 +54,9 @@ class User extends Authenticatable
         ];
     }
 
-    public function roles()
+    public function role()
     {
-        return $this->belognsTo(Role::class);
+        return $this->belongsTo(Role::class);
     }
 
     public function outfit() {

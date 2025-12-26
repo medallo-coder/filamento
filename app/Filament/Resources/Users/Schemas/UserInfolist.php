@@ -4,6 +4,8 @@ namespace App\Filament\Resources\Users\Schemas;
 
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
+use Filament\Infolists\Components\ImageEntry;
+
 
 class UserInfolist
 {
@@ -11,6 +13,8 @@ class UserInfolist
     {
         return $schema
             ->components([
+                ImageEntry::make('foto')
+                ->label('Foto'),
                 TextEntry::make('name')
                 ->label('Nombres:')
                     ->placeholder('-'),
@@ -27,6 +31,8 @@ class UserInfolist
                     ->label('Se unio en:')
                     ->dateTime()
                     ->placeholder('-'),
+
+
             ]);
     }
 }

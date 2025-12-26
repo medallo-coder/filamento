@@ -20,6 +20,10 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
+    //el nombre del menu lateral
+    protected static ?string $navigationLabel = 'Usuarios';   
+    
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'User';

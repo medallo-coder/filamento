@@ -11,20 +11,15 @@ class Outfit extends Model
     protected $fillable = [
         'parte_superior',
         'color_superior',
-        'parte_infeiror',
+        'parte_inferior',
         'color_infeiror',
         'calzado',
         'color_calzado',
         'accesorios',
-        'persona_id'
+        'user_id'
     ];
 
-    public function perosn()
-    {
-        return $this->belongsTo(User::class, 'persona_id');
-    }
-
-    public function person()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

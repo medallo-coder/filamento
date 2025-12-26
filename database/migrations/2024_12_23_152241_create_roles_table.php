@@ -17,9 +17,8 @@ return new class extends Migration
             $table->timestamps();
         });
         DB::table('roles')->insert([
-            ['id' => 1, 'nombre' => 'Desaparecido'],
-            ['id' => 2, 'nombre' => 'Aparecido'],
-            ['id' => 3, 'nombre' => 'Admin'],
+            ['id' => 1, 'nombre' => 'Admin'],
+            ['id' => 2, 'nombre' => 'estandar'],
         ]);
     }
 

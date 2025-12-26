@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('lugar_desaparicion')->nullable();
             $table->dateTime('fecha_desaparicion')->nullable();
             $table->string('foto')->nullable();
+            $table->enum('estado',['desaparecido','aparecido'])->nullable();
 
            
             $table->foreignId('role_id')

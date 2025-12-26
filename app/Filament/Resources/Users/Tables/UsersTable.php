@@ -7,6 +7,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
 class UsersTable
@@ -15,12 +16,26 @@ class UsersTable
     {
         return $table
             ->columns([
+
                 TextColumn::make('email')
                     ->label('Email address')
+                    ->icon(Heroicon::Envelope)
+                    ->iconColor('primary')
+                    ->tooltip('Title')
                     ->searchable(),
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('apellidos')
+                    ->searchable(),
+                TextColumn::make('estado')
+                    ->searchable(),
+                TextColumn::make('role.nombre')
+                        ->badge()
+                        ->color(fn (string $state): string => match ($state) {
+                            'estandar' => 'success',
+                            'admin' => 'warning',
+                        })
+                    ->label('Rol')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
